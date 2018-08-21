@@ -13,6 +13,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.Messaging", "Ass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.Domain", "Assessment.Domain\Assessment.Domain.csproj", "{30897899-EFFA-40FB-B1C4-976D7B911DF7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomPackages", "CustomPackages", "{07E88BD1-DB55-4FFE-A0CB-4EB108DE1C1C}"
+	ProjectSection(SolutionItems) = preProject
+		MyPackages\Framework.Application.1.0.0.nupkg = MyPackages\Framework.Application.1.0.0.nupkg
+		MyPackages\Framework.Common.1.0.0.nupkg = MyPackages\Framework.Common.1.0.0.nupkg
+		MyPackages\Framework.Domain.1.0.0.nupkg = MyPackages\Framework.Domain.1.0.0.nupkg
+		MyPackages\Framework.Persistence.1.0.0.nupkg = MyPackages\Framework.Persistence.1.0.0.nupkg
+		MyPackages\Framework.Validation.1.0.0.nupkg = MyPackages\Framework.Validation.1.0.0.nupkg
+		MyPackages\Framework.ValidationNotification.1.0.0.nupkg = MyPackages\Framework.ValidationNotification.1.0.0.nupkg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
