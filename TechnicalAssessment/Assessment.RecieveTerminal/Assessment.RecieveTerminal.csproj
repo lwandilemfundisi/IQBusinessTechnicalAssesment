@@ -5,4 +5,18 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Framework.Application" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Assessment.RabbitMq\Assessment.RabbitMq.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="listenManagerConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

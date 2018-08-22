@@ -10,11 +10,17 @@
     <PackageReference Include="Framework.Common" Version="1.0.0" />
     <PackageReference Include="Framework.Validation" Version="1.0.0" />
     <PackageReference Include="Framework.ValidationNotification" Version="1.0.0" />
-    <PackageReference Include="RabbitMQ.Client" Version="5.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Assessment.Domain\Assessment.Domain.csproj" />
+    <ProjectReference Include="..\Assessment.RabbitMq\Assessment.RabbitMq.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="sendManagerConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

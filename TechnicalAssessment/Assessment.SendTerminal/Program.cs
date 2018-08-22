@@ -7,18 +7,25 @@ namespace Assessment.SendTerminal
         static void Main(string[] args)
         {
             Console.WriteLine("Enter a message below..");
-            var line = Console.ReadLine();
+            string line = string.Empty;
 
-            var responseTask = SendMessageApp.Instance.ExecuteCommand(new SendMessageCommad
+            do
             {
-                Content = line
-            });
+                line = Console.ReadLine();
+                if (line != "quit")
+                {
+                    var responseTask = SendMessageApp.Instance.ExecuteCommand(new SendMessageCommad
+                    {
+                        Content = line
+                    });
 
-            var response = responseTask.Result;
+                    var response = responseTask.Result;
+                }
+                
+            }
+            while (line != "quit");
 
             Console.Read();
         }
-
-
     }
 }

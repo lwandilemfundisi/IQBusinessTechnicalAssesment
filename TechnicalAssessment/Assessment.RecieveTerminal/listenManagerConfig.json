@@ -1,0 +1,14 @@
+{
+  "RabbitMqUri": "amqp://guest:guest@localhost:5672/",
+  "QueueConfig": {
+    "QueueName": "assessment.hellosent.notification.queue",
+    "Exclusive": "false",
+    "Durable": "false",
+    "AutoDelete": "false"
+  },
+  "BasicQos": {
+    "PrefetchSize": "0",
+    "PrefetchCount": "1",
+    "Global": "false"
+  }
+}

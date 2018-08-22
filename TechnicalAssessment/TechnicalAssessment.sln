@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.RecieveTerminal"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.Interpreter", "Assessment.Interpreter\Assessment.Interpreter.csproj", "{5E804AFB-D565-4E30-9A14-6EA13D63B59E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.Messaging", "Assessment.Messaging\Assessment.Messaging.csproj", "{98B54E82-4FB0-4657-81F0-5F7B79042A84}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.Domain", "Assessment.Domain\Assessment.Domain.csproj", "{30897899-EFFA-40FB-B1C4-976D7B911DF7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomPackages", "CustomPackages", "{07E88BD1-DB55-4FFE-A0CB-4EB108DE1C1C}"
@@ -22,6 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomPackages", "CustomPac
 		MyPackages\Framework.Validation.1.0.0.nupkg = MyPackages\Framework.Validation.1.0.0.nupkg
 		MyPackages\Framework.ValidationNotification.1.0.0.nupkg = MyPackages\Framework.ValidationNotification.1.0.0.nupkg
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Util", "Util", "{D9D04129-9573-4675-9CC6-8B7C8C06E932}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.RabbitMq", "Assessment.RabbitMq\Assessment.RabbitMq.csproj", "{8447AA37-6486-46E8-B364-6683D8868EB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,17 +43,20 @@ Global
 		{5E804AFB-D565-4E30-9A14-6EA13D63B59E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E804AFB-D565-4E30-9A14-6EA13D63B59E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E804AFB-D565-4E30-9A14-6EA13D63B59E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98B54E82-4FB0-4657-81F0-5F7B79042A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98B54E82-4FB0-4657-81F0-5F7B79042A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98B54E82-4FB0-4657-81F0-5F7B79042A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98B54E82-4FB0-4657-81F0-5F7B79042A84}.Release|Any CPU.Build.0 = Release|Any CPU
 		{30897899-EFFA-40FB-B1C4-976D7B911DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{30897899-EFFA-40FB-B1C4-976D7B911DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30897899-EFFA-40FB-B1C4-976D7B911DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30897899-EFFA-40FB-B1C4-976D7B911DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8447AA37-6486-46E8-B364-6683D8868EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8447AA37-6486-46E8-B364-6683D8868EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8447AA37-6486-46E8-B364-6683D8868EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8447AA37-6486-46E8-B364-6683D8868EB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8447AA37-6486-46E8-B364-6683D8868EB6} = {D9D04129-9573-4675-9CC6-8B7C8C06E932}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC046900-6B8A-4BA8-B638-A520131AC3C0}

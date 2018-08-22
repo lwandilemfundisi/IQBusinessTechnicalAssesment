@@ -1,6 +1,4 @@
-﻿using Assessment.Domain;
-using Assessment.RabbitMqClient;
-using Framework.Application;
+﻿using Framework.Application;
 using Framework.Common;
 using Framework.Persistence;
 using Newtonsoft.Json;
@@ -9,14 +7,18 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assessment.SendTerminal
+namespace Assessment.RecieveTerminal
 {
-    public class SendMessageCommadHandler : CommandHandler<SendMessageCommad>
+    public class PrintMessageCommandHandler : CommandHandler<PrintMessageCommand>
     {
-        public SendMessageCommadHandler(IPersistanceFactory repositoryFactory)
+        #region Constructors
+
+        public PrintMessageCommandHandler(IPersistanceFactory repositoryFactory)
             : base(repositoryFactory)
         {
         }
+
+        #endregion
 
         protected override AbstractResponse BuildResponse()
         {
@@ -29,14 +31,9 @@ namespace Assessment.SendTerminal
 
         protected override async Task ExecuteCommand()
         {
-            var message = new Message { Content = Command.Content };
-
-            await Task.Run(() => 
+            await Task.Run(() =>
             {
-                Validate(message, (c) => 
-                {
-                    RabbitMqSendManager.Instance.Send(c.Content, "application/text");
-                });
+                Console.WriteLine($"Here is the message: {Command.Message}.");
             });
         }
     }
